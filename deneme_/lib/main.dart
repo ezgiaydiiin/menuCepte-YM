@@ -8,8 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Menü Cepte',
-      color:Colors.red,
+      title: 'menu cepte',
+      color: Colors.red,
       home: MyHomePage(),
     );
   }
@@ -46,14 +46,19 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             child: ListView(
-              children: _menuler.where((menu) => menu.ad.toLowerCase().contains(_aramaTerimi.toLowerCase())).map((menu) => ListTile(
-                leading: Icon(Icons.restaurant),
-                title: Text(menu.ad),
-                subtitle: Text(menu.mutfak),
-                onTap: () {
-                  // Menünün detay sayfasına git
-                },
-              )).toList(),
+              children: _menuler
+                  .where((menu) => menu.ad
+                      .toLowerCase()
+                      .contains(_aramaTerimi.toLowerCase()))
+                  .map((menu) => ListTile(
+                        leading: Icon(Icons.restaurant),
+                        title: Text(menu.ad),
+                        subtitle: Text(menu.mutfak),
+                        onTap: () {
+                          // Menünün detay sayfasına git
+                        },
+                      ))
+                  .toList(),
             ),
           ),
         ],
