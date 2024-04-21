@@ -1,3 +1,4 @@
+import 'package:first_page/thirdpage.dart';
 import 'package:flutter/material.dart';
 import 'secondpage.dart';
 
@@ -60,7 +61,7 @@ class FirstPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min, // Avoid unnecessary space
               children: [
                 ElevatedButton(
-                    onPressed: () {
+                  onPressed: () {
                     // Add navigation to "Menu Ekle" screen
                     /*Navigator.push(
                       context,
@@ -68,6 +69,13 @@ class FirstPage extends StatelessWidget {
                           builder: (context) =>
                               MyHome()), // SecondPage'e yönlendirme
                     );*/
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ThirdPage()), // SecondPage'e yönlendirme
+                    );
                   },
                   child: Text('MENU EKLE'),
                 ),
