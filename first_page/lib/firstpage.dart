@@ -60,14 +60,14 @@ class FirstPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min, // Avoid unnecessary space
               children: [
                 ElevatedButton(
-                  onPressed: () {
+                    onPressed: () {
                     // Add navigation to "Menu Ekle" screen
-                    Navigator.push(
+                    /*Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
                               MyHome()), // SecondPage'e yönlendirme
-                    );
+                    );*/
                   },
                   child: Text('MENU EKLE'),
                 ),
